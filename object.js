@@ -12,3 +12,4 @@ console.log(myObj);
 delete myObj["Hello, World"]
 
 console.log(myObj);
+
