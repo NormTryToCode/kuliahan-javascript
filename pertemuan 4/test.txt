@@ -1,0 +1,4 @@
+Hello my mannnn
+
+
+This is text.txt on current directory...

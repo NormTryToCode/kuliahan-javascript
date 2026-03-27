@@ -1,0 +1,24 @@
+
+const http = require("http");
+
+const routes = {
+    '/info': '<h1>This is info page</h1>',
+    '/about': '<h1>Learn More About Us</h1>',
+    '/contact': '<h1>Contact Us</h1>'
+};
+
+const port = 3000;
+const app = http.createServer((request, response) => {
+    response.statusCode = 200;
+    response.setHeader('Content-Type', 'text/html');
+    if (routes[request.url]) {
+        response.end(routes[request.url]);
+    }
+    else {
+        response.end('<h1>Welcome!</h1>')
+    }
+});
+
+app.listen(port);
+
+console.log(`Server running on port number: ${port}`);
